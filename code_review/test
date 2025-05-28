@@ -1,0 +1,28 @@
+# 실습
+
+1. 
+data_list = list(set(data_list))
+sorted(data_list, key=  lambda x: len(x))
+
+2. 
+list(filter(lambda x: 'a' in x , words))
+
+3.
+upper_name = list(map(lambda x: x[0].upper()+ x[1:], names))
+upper_name
+
+4.
+filtered_list = list(filter(lambda x: ' ' in x, strings))
+list(map(lambda x: x.strip(), filtered_list))
+
+5.
+dict(map(lambda x: (x[0], int(x[1]*0.9)), products.items()))
+
+6.
+filtered_scores = list(filter(lambda x: x >= 60, scores))
+average = reduce(lambda a, b: a + b, filtered_scores) / len(filtered_scores)
+print(average) 
+
+7.
+flipped = dict(map(lambda item: (item[1], item[0]), students.items()))
+print(flipped)  # 출력: {85: 'John', 92: 'Alice', 78: 'Bob'}
